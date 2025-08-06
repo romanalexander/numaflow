@@ -374,8 +374,8 @@ redis_exporter`},
 		if nr.Persistence.VolumeSize != nil {
 			volSize = *nr.Persistence.VolumeSize
 		}
-		// Default to ReadWriteOnce
-		accessMode := corev1.ReadWriteOnce
+		// Default to ReadWriteOncePod
+		accessMode := corev1.ReadWriteOncePod
 		if nr.Persistence.AccessMode != nil {
 			accessMode = *nr.Persistence.AccessMode
 		}
